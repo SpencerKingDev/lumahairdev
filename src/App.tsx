@@ -27,8 +27,8 @@ function App() {
           />
         </Box>
         <Box sx={{ textAlign: 'center', mt: 2 }}>
-          <Typography variant='body1'>
-            This website is currently under construction. In the meantime, you can book an appointment by scheduling on the link below:
+          <Typography variant='h1'>
+            This is the dev site page
           </Typography>
           <Button variant='contained'
             href='http://www.vagaro.com/lumahairstudio'
