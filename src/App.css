@@ -36,14 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.responsive-logo {
-  width: 100%; /* Default width */
-  max-width: 450px; /* Limit the maximum width */
-}
-
-@media (max-width: 500px) {
-  .responsive-logo {
-    width: 100px; /* Adjust width for smaller screens */
-  }
-}
