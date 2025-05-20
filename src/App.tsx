@@ -1,50 +1,27 @@
 import React from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import './App.css';
-import { Box, Typography, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import NavBar from './components/NavBar';
-import logo from './assets/Logo.png';
+import MainPage from './pages/MainPage';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
 
-function App() {
+export default function App() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'background.default' }} >
-      <NavBar />
-      <Box sx={{ my: 2 }}>
-        <Box sx={{ textAlign: 'center' }}>
-          <Box
-            component="img"
-            src={logo}
-            alt="Luma Hair Studio Logo"
-            sx={{
-              width: '100%', // Default width
-              maxWidth: '450px', // Limit maximum width
-              '@media (max-width: 768px)': {
-                width: '400px', // Adjust width for smaller screens
-              },
-              '@media (max-width: 500px)': {
-                width: '300px', // Further adjust width for very small screens
-              },
-            }}
-          />
+    <>
+      <BrowserRouter>
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'background.default' }} >
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
         </Box>
-        <Box sx={{ textAlign: 'center', mt: 2 }}>
-          <Typography variant='h1'>
-            This is the dev site page
-          </Typography>
-          <Button variant='contained'
-            href='http://www.vagaro.com/lumahairstudio'
-            target='_blank'
-            sx={{
-              backgroundColor: 'rgb(100, 137, 146)',
-              mt: 2
-            }}
-            size='large'
-          >
-            Book Appointment
-          </Button>
-        </Box>
-      </Box>
-    </Box>
+      </BrowserRouter>
+    </>
   );
 }
-
-export default App;

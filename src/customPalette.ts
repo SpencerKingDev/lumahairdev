@@ -1,10 +1,11 @@
 import { createTheme } from "@mui/material";
-import { red, green, grey } from "@mui/material/colors";
+import { red, green } from "@mui/material/colors";
+import AppColors from "./assets/colors";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: grey[900],
+      main: AppColors.primaryText,
       contrastText: "#fff",
     },
     secondary: {
@@ -28,8 +29,8 @@ const theme = createTheme({
       contrastText: "#fff",
     },
     background: {
-      default: "rgb(250, 249, 244)",
-      paper: "rgb(175, 196, 188)",
+      default: AppColors.backgroundDefault,
+      paper: AppColors.backgroundAccent,
     },
   },
 });
