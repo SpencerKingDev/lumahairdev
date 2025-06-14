@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useScrollTrigger } from "@mui/material";
 import { KeyboardArrowUp } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
+import AppColors from "../assets/colors";
 
 interface Props {
   children?: React.ReactElement<unknown>;
@@ -135,6 +136,17 @@ export default function NavBar(props: Props) {
                     <Typography sx={{ textAlign: 'center', color: 'primary.main' }}>{page}</Typography>
                   </MenuItem>
                 ))}
+                <Button variant='contained'
+                  href='https://www.vagaro.com/lumahairstudio/services'
+                  target='_blank'
+                  sx={{
+                    backgroundColor: AppColors.buttonPrimary,
+                    m: 1
+                  }}
+                  size='small'
+                >
+                  Book Now
+                </Button>
               </Menu>
             </Box>
             {/* <Typography
@@ -162,6 +174,18 @@ export default function NavBar(props: Props) {
                   {page}
                 </Button>
               ))}
+              <Button variant='contained'
+                href='https://www.vagaro.com/lumahairstudio/services'
+                target='_blank'
+                sx={{
+                  backgroundColor: AppColors.buttonPrimary,
+                  mt: 1.5,
+                  mb: 1.5
+                }}
+                size='small'
+              >
+                Book Now
+              </Button>
             </Box>
           </Toolbar>
         </Container>
