@@ -87,7 +87,7 @@ export default function NavBar(props: Props) {
     <React.Fragment>
       <AppBar position="static" sx={{ backgroundColor: 'background.paper' }}>
         <Container maxWidth="xl">
-          <Toolbar disableGutters>
+          <Toolbar id="back-to-top-anchor" disableGutters>
             {/* <Typography
               variant="h6"
               noWrap
@@ -174,15 +174,18 @@ export default function NavBar(props: Props) {
                   {page}
                 </Button>
               ))}
-              <Button variant='contained'
-                href='https://www.vagaro.com/lumahairstudio/services'
-                target='_blank'
+            </Box>
+            <Box sx={{ ml: 'auto' }}>
+              <Button
+                variant="contained"
+                href="https://www.vagaro.com/lumahairstudio/services"
+                target="_blank"
                 sx={{
                   backgroundColor: AppColors.buttonPrimary,
                   mt: 1.5,
-                  mb: 1.5
+                  mb: 1.5,
                 }}
-                size='small'
+                size="small"
               >
                 Book Now
               </Button>
@@ -190,7 +193,6 @@ export default function NavBar(props: Props) {
           </Toolbar>
         </Container>
       </AppBar>
-      <Toolbar id="back-to-top-anchor" />
 
       <ScrollTop {...props}>
         <Fab size="small" aria-label="scroll back to top">
@@ -199,4 +201,4 @@ export default function NavBar(props: Props) {
       </ScrollTop>
     </React.Fragment>
   );
-}
+} 
