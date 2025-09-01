@@ -81,7 +81,7 @@ export const servicesDescription = [
     description: "",
   },
   {
-    title: "Color, Partial Highlight, Cut",
+    title: "Color, Partial Highlight, Haircut",
     price: "245",
     description: "",
   },

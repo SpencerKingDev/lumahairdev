@@ -14,7 +14,7 @@ export default function ServicesPage() {
             <Box sx={{ my: 2 }}>
               <Box sx={{ textAlign: 'center' }}>
                 <Typography variant='h1' sx={{ fontSize: '2rem', color: 'primary.main', mt: 1, mb: 2 }} gutterBottom>
-                  All services at Luma are personalized with intention, using clean, consciously chosen products in a calming one-on-one setting
+                  All services at Luma are personalized with intention, using clean, consciously chosen products in a calming one-on-one setting.
                 </Typography>
                 <Box
                   component="img"
