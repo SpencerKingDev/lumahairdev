@@ -56,29 +56,39 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, price, description }) 
           <Typography variant="h5" sx={{ color: colors.serviceText }}>
             {title}
           </Typography>
-          <Typography variant="h5" sx={{ color: colors.serviceText }}>
-            {price}
-          </Typography>
+          {price === "Free" ?
+            <Typography variant="h5" sx={{ color: colors.serviceText }}>
+              {price}
+            </Typography>
+            :
+            <Typography variant="h5" sx={{ color: colors.serviceText }}>
+              ${price}
+            </Typography>
+          }
         </Box>
       </CardContent>
-      <CardActions
-        disableSpacing
-        onClick={handleExpandClick}
-        sx={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
-      >
-        <Typography variant="h6" sx={{ color: colors.serviceText, marginRight: 1, marginLeft: 1 }}>
-          View Details
-        </Typography>
-        <ExpandMore
-          expand={expanded}
+      {description.length > 0 ?
+        <CardActions
+          disableSpacing
           onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-          sx={{ display: 'flex', alignItems: 'center', margin: 0 }}
+          sx={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}
         >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
+          <Typography variant="h6" sx={{ color: colors.serviceText, marginRight: 1, marginLeft: 1 }}>
+            View Details
+          </Typography>
+          <ExpandMore
+            expand={expanded}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+            sx={{ display: 'flex', alignItems: 'center', margin: 0 }}
+          >
+            <ExpandMoreIcon />
+          </ExpandMore>
+        </CardActions>
+        :
+        <></>
+      }
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography sx={{ marginBottom: 2, textAlign: 'left', color: 'primary' }}>
