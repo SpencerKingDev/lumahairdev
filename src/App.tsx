@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import './App.css';
 import { Box } from '@mui/material';
 import NavBar from './components/NavBar';
@@ -11,7 +11,7 @@ import ContactPage from './pages/ContactPage';
 export default function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'background.default' }} >
           <NavBar />
           <Routes>
@@ -21,7 +21,7 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </Box>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

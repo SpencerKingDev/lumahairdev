@@ -3,8 +3,15 @@ import '../App.css';
 import { Box, Button, Typography, Container } from '@mui/material';
 import logo from '../assets/Logo.png'
 import AppColors from '../assets/colors';
+import { useNavigate } from "react-router-dom";
 
 function MainPage() {
+  const navigate = useNavigate();
+
+  const handleSeeServices = () => {
+    navigate('/services');
+  };
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'background.default' }} >
       <Box sx={{ my: 2 }}>
@@ -50,7 +57,8 @@ function MainPage() {
           </Container>
         </Box>
         <Box sx={{ textAlign: 'center' }}>
-          <Button variant='contained'
+          <Button
+            variant='contained'
             href='https://www.vagaro.com/lumahairstudio/services'
             target='_blank'
             sx={{
@@ -61,6 +69,14 @@ function MainPage() {
             size='large'
           >
             Book Now
+          </Button>
+          <Button
+            variant='outlined'
+            size='large'
+            sx={{ textAlign: 'center', ml: 1, cursor: 'pointer' }}
+            onClick={handleSeeServices}
+          >
+            Services
           </Button>
         </Box>
       </Box>
