@@ -1,0 +1,4 @@
+{
+  "name": "lumahairstudio-dev",
+  "verify": "npm run build"
+}
