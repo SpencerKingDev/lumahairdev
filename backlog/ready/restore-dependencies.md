@@ -1,4 +1,4 @@
-<!-- Status: ready | Created: 2026-08-20 | Picked: - | Branch: - | Verify: npm run build -->
+<!-- Status: ready | Tier: 1 | Created: 2026-08-20 | Picked: - | Branch: - | Verify: npm run build -->
 
 # Restore dependencies so the build runs
 
