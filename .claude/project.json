@@ -1,4 +1,5 @@
 {
   "name": "lumahairstudio-dev",
+  "defaultBranch": "main",
   "verify": "npm run build"
 }
