@@ -3,12 +3,14 @@
 ## What this is
 
 Marketing site for Luma Hair Studio — the staging variant. Create React App + TypeScript with MUI, published to
-GitHub Pages at https://www.lumahairstudio.com.
+GitHub Pages at https://dev.lumahairstudio.com.
 
-**This repo is the `development` half of a two-repo pair.** `lumahairstudio` is production;
-`lumahairstudio-dev` is where changes are tried first. They share the same `name` in
-`package.json` and the same `homepage`, and both deploy with `gh-pages -d build` — so check
-which directory you are in before deploying.
+**This repo is the `development` half of a two-repo pair.** Production is
+`SpencerLumaHair/luma-hair`, serving https://www.lumahairstudio.com; this repo is
+`SpencerKing7/lumahairdev`, serving https://dev.lumahairstudio.com. Each host comes from that
+repo's own `public/CNAME`. The two share the same `name` in `package.json` and the same
+`gh-pages -d build` deploy, so the working copies look alike — check which directory you are in
+before deploying.
 
 ## Layout
 
@@ -41,8 +43,9 @@ lives in `customPalette.ts` and `assets/colors.ts`.
 
 ## Never
 
-- **Never deploy without checking which of the two repos you are in.** Both publish to the same
-  live domain.
+- **Never deploy without checking which of the two repos you are in.** The two working copies are
+  near-identical and both run `npm run deploy`, but this one publishes the dev host and the other
+  publishes the live www site.
 - **Never let the two repos silently diverge.** They currently differ in `App.tsx`, `NavBar.tsx`,
   both palette files, and both pages; `ServiceCard.tsx` exists only in dev. Port changes
   deliberately rather than letting drift accumulate.
