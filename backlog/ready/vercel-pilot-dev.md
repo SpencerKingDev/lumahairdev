@@ -5,16 +5,16 @@
 ## Why
 
 The goal is one hosting surface instead of GitHub Pages plus Cloudflare rules. This repo is where
-that gets proven: `dev.lumahairstudio.com` is already dark (its Cloudflare record still points at
-the deleted `spencerkingdev.github.io`), so there is nothing live to break while working out the
+that gets proven: `dev.lumahairstudio.com` is already dark — its Cloudflare record was deleted on
+2026-08-24, so the name is `NXDOMAIN` and there is nothing live to break while working out the
 flow. Whatever is learned here is what `luma-hair` follows.
 
 ## What to do
 
 1. Create the Vercel project from `SpencerKing7/lumahairdev`. CRA needs no config — build
    `npm run build`, output `build/`.
-2. In Cloudflare DNS, replace the `dev` record with the A/CNAME values Vercel shows in the
-   project's **Domains** tab.
+2. In Cloudflare DNS, add a `dev` record with the A/CNAME values Vercel shows in the project's
+   **Domains** tab. There is no existing record to edit — the old one is gone.
 3. **Grey-cloud it (DNS only).** Vercel issues and serves its own certificate; leaving the orange
    cloud on puts Cloudflare's cert in front of Vercel's and produces cert mismatches or redirect
    loops.
