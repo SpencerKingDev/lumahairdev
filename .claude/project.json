@@ -1,5 +1,6 @@
 {
   "name": "lumahairstudio-dev",
   "defaultBranch": "main",
+  "linearProject": "Luma Hair Studio",
   "verify": "npm run build"
 }
