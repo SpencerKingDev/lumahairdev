@@ -17,7 +17,7 @@ before deploying.
 - `src/pages/` — `MainPage`, `ServicesPage`
 - `src/components/` — `NavBar`, and in the dev repo also `ServiceCard`
 - `src/assets/colors.ts` and `src/customPalette.ts` — the palette, which differs between the two repos
-- Work items live in `backlog/{ready,active,done}/`
+- Work items live in Linear (project `Luma Hair Studio`); use `/backlog`
 
 ## Commands
 
